@@ -12,7 +12,7 @@ namespace OOP_DOG
         private string furLength;
         private float height;
         private string runningSpeed;
-        private int weight;
+        private double weight;
 
         //properties
         public string FurLength
@@ -31,7 +31,7 @@ namespace OOP_DOG
             get { return this.runningSpeed; }
             set { this.runningSpeed = value; }
         }
-        public int Weight
+        public double Weight
         {
             get { return this.weight; }
             set { this.weight = value; }
@@ -50,6 +50,28 @@ namespace OOP_DOG
             this.furLength = furLength;
             this.height = height;
         }
+        //methods? in oop? hmm...
 
+        public void Run()
+        {
+            //calling run
+            runningSpeed = "getting faster.";
+            //-- means going down by one
+            weight--;
+        }
+        public void Bark()
+        {
+            Console.WriteLine("\a \a \a \a \a");
+        }
+        public void Potty()
+        {
+            weight -= 0.1;
+            //means weight now equals weight -0.1
+        }
+        public void Groom()
+        {
+            //strings get the "";
+            furLength = "All cleaned up!";
+        }
     }
 }
